@@ -14,5 +14,5 @@ jobs:
         run: docker build -t oscarsidebo/docker-test -f Dockerfile.dev .
 
       - name: Run test suite
-        run: docker run oscarsidebo/docker-test npm run test -- --coverage
+        run: docker run -e CI=true oscarsidebo/docker-test npm run test -- --coverage
   
